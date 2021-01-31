@@ -28,11 +28,11 @@ RUN apt update && \
 	apt install -y git;
 
 #PostgreSQL install
-RUN apt-get update && \
-	apt-get install -y postgresql-10 postgresql-contrib;
+# RUN apt-get update && \
+# 	apt-get install -y postgresql-10 postgresql-contrib;
 
 # Setup JAVA_HOME, this is useful for docker commandline
 RUN export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64 && \
-	export PATH=$PATH:/usr/lib/jvm/java-11-openjdk-amd64/bin
+	export PATH=$PATH:/usr/lib/jvm/java-11-openjdk-amd64/bin;
 
 EXPOSE 10000 9900
